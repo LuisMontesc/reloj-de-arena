@@ -86,3 +86,24 @@ document.querySelectorAll(
 ).forEach(card => {
     observador.observe(card);
 });
+
+// ===== LIGHTBOX GALERÍA =====
+const lightbox = GLightbox({
+    touchNavigation: true,
+    loop: true,
+    autoplayVideos: false,
+    openEffect: 'zoom',
+    closeEffect: 'fade',
+    slideEffect: 'slide',
+    moreLength: 0,
+    closeButton: true,
+    touchFollowAxis: true,
+    keyboardNavigation: true,
+    draggable: true,
+    dragToleranceX: 10,
+    dragToleranceY: 10,
+    dragAutoSnap: false,
+    preload: true,
+    descPosition: 'bottom',
+    skin: 'clean'
+});
