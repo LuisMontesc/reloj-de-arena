@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://luismontesc.github.io/reloj-de-arena/sitemap.xml

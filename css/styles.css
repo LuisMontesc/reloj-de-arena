@@ -241,9 +241,10 @@ section {
     min-height: 100vh;
     background:
         linear-gradient(160deg,
-            rgba(13,13,13,0.95) 0%,
-            rgba(192,57,43,0.85) 50%,
-            rgba(230,126,34,0.9) 100%);
+            rgba(13,13,13,0.88) 0%,
+            rgba(192,57,43,0.75) 50%,
+            rgba(230,126,34,0.8) 100%),
+        url('../img/hero.jpg') center center / cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1191,4 +1192,13 @@ footer::before {
     .contacto-form-card {
         padding: 25px;
     }
+}
+
+/* ===== LOGO NAVBAR ===== */
+.navbar-logo {
+    height: 40px;
+    width: auto;
+    margin-right: 10px;
+    border-radius: 50%;
+    object-fit: cover;
 }
