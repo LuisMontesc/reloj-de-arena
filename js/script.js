@@ -25,9 +25,19 @@ function enviarFormulario() {
     alert('¡Gracias ' + nombre + '! Tu mensaje fue enviado. Nos comunicaremos contigo pronto.');
 }
 
-// ===== BOTÓN VOLVER ARRIBA =====
+// ===== NAVBAR SCROLL =====
 window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
     const backTop = document.getElementById('backTop');
+
+    // Navbar con clase scrolled
+    if (window.scrollY > 60) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+
+    // Botón volver arriba
     if (backTop) {
         if (window.scrollY > 400) {
             backTop.style.display = 'flex';
@@ -37,33 +47,19 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// ===== NAVBAR SCROLL (cambia color al bajar) =====
-window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-        navbar.style.backgroundColor = 'rgba(26,26,26,0.97)';
-        navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.3)';
-    } else {
-        navbar.style.backgroundColor = 'var(--negro)';
-        navbar.style.boxShadow = 'none';
-    }
-});
-
-// ===== NAVEGACIÓN SUAVE CON OFFSET (por el navbar fijo) =====
+// ===== NAVEGACIÓN SUAVE =====
 document.querySelectorAll('a[href^="#"]').forEach(enlace => {
     enlace.addEventListener('click', function(e) {
         e.preventDefault();
         const destino = document.querySelector(this.getAttribute('href'));
         if (destino) {
-            const offset = 70;
+            const offset = 75;
             const posicion = destino.getBoundingClientRect().top + window.scrollY - offset;
             window.scrollTo({ top: posicion, behavior: 'smooth' });
 
-            // Cierra el menú hamburguesa en móvil
             const menu = document.getElementById('menuPrincipal');
             if (menu.classList.contains('show')) {
-                const toggler = document.querySelector('.navbar-toggler');
-                toggler.click();
+                document.querySelector('.navbar-toggler').click();
             }
         }
     });
@@ -78,7 +74,15 @@ const observador = new IntersectionObserver((entradas) => {
     });
 }, { threshold: 0.1 });
 
+// Observar secciones
 document.querySelectorAll('section').forEach(seccion => {
     seccion.classList.add('fade-in');
     observador.observe(seccion);
+});
+
+// Observar tarjetas individuales
+document.querySelectorAll(
+    '.taller-card, .mvv-card, .actividad-card, .equipo-card, .stat-card'
+).forEach(card => {
+    observador.observe(card);
 });
