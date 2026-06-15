@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reloj de Arena | Asociación Cultural y Educativa — Pativilca, Barranca</title>
     <meta name="google-site-verification" content="qjQQGQXUryzUMJVcgmUqXJ7rHgaO_LkFnpcycNTjUKw" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="shortcut icon" href="favicon.ico">
 
     <!-- SEO Básico -->
     <meta name="description" content="Asociación Cultural y Educativa Reloj de Arena. Arte, cultura y educación comunitaria desde 2013 en Pativilca, Barranca. Talleres de batucada, teatro, circo y más. Punto de Cultura reconocido por el Ministerio de Cultura del Perú.">
@@ -46,6 +52,18 @@
 </head>
 <body>
 
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <div class="preloader-contenido">
+            <img src="img/logo.jpg" alt="Reloj de Arena" class="preloader-logo">
+            <h3 class="preloader-titulo">Reloj de Arena</h3>
+            <div class="preloader-barra">
+                <div class="preloader-progreso"></div>
+            </div>
+            <p class="preloader-texto">Cargando...</p>
+        </div>
+    </div>
+
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg">
         <div class="container">
@@ -71,7 +89,9 @@
                     <li class="nav-item"><a class="nav-link" href="#talleres">Talleres</a></li>
                     <li class="nav-item"><a class="nav-link" href="#actividades">Actividades</a></li>
                     <li class="nav-item"><a class="nav-link" href="#galeria">Galería</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonios">Testimonios</a></li>
                     <li class="nav-item"><a class="nav-link" href="#equipo">Equipo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#memoria" style="color: var(--dorado-claro) !important;">✦ Xiomi</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
                 </ul>
             </div>
@@ -122,19 +142,19 @@
                     <div class="row g-3">
                         <div class="col-6">
                             <div class="stat-card">
-                                <h3>2013</h3>
+                                <h3><span class="contador" data-objetivo="2013" data-inicio="2000">2000</span></h3>
                                 <p>Año de fundación</p>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="stat-card">
-                                <h3>+10</h3>
+                                <h3>+<span class="contador" data-objetivo="10" data-inicio="0">0</span></h3>
                                 <p>Años de impacto</p>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="stat-card">
-                                <h3>4</h3>
+                                <h3><span class="contador" data-objetivo="4" data-inicio="0">0</span></h3>
                                 <p>Talleres activos</p>
                             </div>
                         </div>
@@ -728,6 +748,116 @@
         </div>
     </section>
 
+    <!-- TESTIMONIOS -->
+    <section id="testimonios" class="bg-gris">
+        <div class="container">
+
+            <h2 class="titulo-seccion">Voces de la Comunidad</h2>
+            <div class="linea-decorativa"></div>
+            <p class="subtitulo-seccion">Lo que dicen quienes forman parte de Reloj de Arena</p>
+
+            <div class="row g-4">
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="testimonio-card">
+                        <div class="testimonio-comilla">"</div>
+                        <p class="testimonio-texto">Reloj de Arena cambió mi vida. Llegué tímida y el teatro me enseñó a expresarme, a confiar en mí misma y a querer mi comunidad.</p>
+                        <div class="testimonio-autor">
+                            <div class="testimonio-avatar carmesi">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div>
+                                <h6>Alumna de Teatro</h6>
+                                <span>Pativilca, Barranca</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="testimonio-card">
+                        <div class="testimonio-comilla">"</div>
+                        <p class="testimonio-texto">Ver a mi hijo tocar en la batucada del FIACPO fue uno de los momentos más emocionantes de mi vida. Gracias por darles un espacio seguro y gratuito.</p>
+                        <div class="testimonio-autor">
+                            <div class="testimonio-avatar dorado">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div>
+                                <h6>Madre de familia</h6>
+                                <span>Pativilca, Barranca</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="testimonio-card">
+                        <div class="testimonio-comilla">"</div>
+                        <p class="testimonio-texto">Empecé como alumno de circo y hoy soy voluntario. Reloj de Arena me enseñó que el arte es una herramienta de transformación social.</p>
+                        <div class="testimonio-autor">
+                            <div class="testimonio-avatar turquesa">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div>
+                                <h6>Ex alumno y voluntario</h6>
+                                <span>Pativilca, Barranca</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="testimonio-card">
+                        <div class="testimonio-comilla">"</div>
+                        <p class="testimonio-texto">Los pasacalles de Reloj de Arena llenan de vida y color las calles de Pativilca. Son parte esencial de nuestra identidad cultural.</p>
+                        <div class="testimonio-autor">
+                            <div class="testimonio-avatar carmesi">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div>
+                                <h6>Vecino de Pativilca</h6>
+                                <span>Pativilca, Barranca</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="testimonio-card">
+                        <div class="testimonio-comilla">"</div>
+                        <p class="testimonio-texto">Como tallerista me siento parte de algo grande. Ver el progreso de los chicos semana a semana es la mejor recompensa que existe.</p>
+                        <div class="testimonio-autor">
+                            <div class="testimonio-avatar dorado">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div>
+                                <h6>Tallerista artístico</h6>
+                                <span>Barranca, Lima</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="testimonio-card">
+                        <div class="testimonio-comilla">"</div>
+                        <p class="testimonio-texto">El FIACPO es el evento cultural más importante del Norte Chico. Reloj de Arena demuestra que el arte comunitario transforma sociedades.</p>
+                        <div class="testimonio-autor">
+                            <div class="testimonio-avatar turquesa">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div>
+                                <h6>Gestor cultural</h6>
+                                <span>Norte Chico, Lima</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <!-- EQUIPO -->
     <section id="equipo" class="bg-gris">
         <div class="container">
@@ -793,6 +923,126 @@
                 <h4>¿Quieres ser parte de Reloj de Arena?</h4>
                 <p>Súmate como voluntario, tallerista o colaborador. Juntos construimos comunidad a través del arte.</p>
                 <a href="#contacto" class="btn-carmesi">Contáctanos</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- EN SU MEMORIA -->
+    <section id="memoria">
+        <div class="container">
+
+            <!-- Encabezado -->
+            <div class="memoria-encabezado">
+                <span class="memoria-badge">En su memoria</span>
+                <h2 class="titulo-seccion" style="color: var(--dorado-claro);">Xiomi Nathaly Quijandría Cotrina</h2>
+                <div class="linea-decorativa" style="background: linear-gradient(90deg, var(--dorado), var(--dorado-claro));"></div>
+                <p class="memoria-anios">1995 — 2025</p>
+                <p class="memoria-cargo">Presidenta y fundadora · Asociación Cultural y Educativa Reloj de Arena</p>
+            </div>
+
+            <!-- Contenido principal -->
+            <div class="row align-items-center g-5 mb-5">
+
+                <!-- Foto principal -->
+                <div class="col-lg-4 text-center">
+                    <div class="memoria-foto-principal">
+                        <a href="img/xiomi/xiomi-principal.jpg" class="glightbox" data-gallery="xiomi" data-description="Xiomi Nathaly Quijandría Cotrina">
+                            <img src="img/xiomi/xiomi-principal.jpg" alt="Xiomi Nathaly Quijandría Cotrina">
+                        </a>
+                    </div>
+                    <div class="memoria-frase">
+                        <i class="fas fa-quote-left"></i>
+                        <p>"Esta soy yo y esto que siento importa"</p>
+                        <span>— Xiomi Nathaly Quijandría Cotrina</span>
+                    </div>
+                </div>
+
+                <!-- Biografía -->
+                <div class="col-lg-8">
+                    <div class="memoria-bio">
+                        <h4><i class="fas fa-heart"></i> Su historia</h4>
+                        <p>Xiomi fue una destacada artista, líder cultural y maestra. Dentro de la Asociación Cultural Reloj de Arena, desempeñó una labor fundamental como presidenta, guiando los proyectos y la interna de la agrupación, además de participar activamente en el movimiento de batucadas del Perú.</p>
+                        <p>Su comunidad, compañeros del arte y familiares la recuerdan de forma unánime como una mujer guerrera, soñadora, con una enorme vocación de enseñanza y cuyo liderazgo dejó una huella imborrable en el panorama artístico local.</p>
+                        <p>Xiomi estuvo presente desde los inicios de Reloj de Arena, siendo parte esencial de lo que hoy somos como organización. Su legado vive en cada taller, en cada pasacalle, en cada niño que encuentra en el arte su voz.</p>
+                        <div class="memoria-datos">
+                            <div class="memoria-dato">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>Desde los inicios de la asociación en 2013</span>
+                            </div>
+                            <div class="memoria-dato">
+                                <i class="fas fa-drum"></i>
+                                <span>Activa en el movimiento de batucadas del Perú</span>
+                            </div>
+                            <div class="memoria-dato">
+                                <i class="fas fa-star"></i>
+                                <span>Presidenta y líder cultural de Reloj de Arena</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Galería de recuerdos -->
+            <h4 class="memoria-galeria-titulo">Galería de recuerdos</h4>
+            <div class="row g-3">
+
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="memoria-galeria-card">
+                        <a href="img/xiomi/xiomi-1.jpg" class="glightbox" data-gallery="xiomi" data-description="Xiomi Nathaly Quijandría Cotrina">
+                            <img src="img/xiomi/xiomi-1.jpg" alt="Xiomi 1">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="memoria-galeria-card">
+                        <a href="img/xiomi/xiomi-2.jpg" class="glightbox" data-gallery="xiomi" data-description="Xiomi Nathaly Quijandría Cotrina">
+                            <img src="img/xiomi/xiomi-2.jpg" alt="Xiomi 2">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="memoria-galeria-card">
+                        <a href="img/xiomi/xiomi-3.jpg" class="glightbox" data-gallery="xiomi" data-description="Xiomi Nathaly Quijandría Cotrina">
+                            <img src="img/xiomi/xiomi-3.jpg" alt="Xiomi 3">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="memoria-galeria-card">
+                        <a href="img/xiomi/xiomi-4.jpg" class="glightbox" data-gallery="xiomi" data-description="Xiomi Nathaly Quijandría Cotrina">
+                            <img src="img/xiomi/xiomi-4.jpg" alt="Xiomi 4">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="memoria-galeria-card">
+                        <a href="img/xiomi/xiomi-5.jpg" class="glightbox" data-gallery="xiomi" data-description="Xiomi Nathaly Quijandría Cotrina">
+                            <img src="img/xiomi/xiomi-5.jpg" alt="Xiomi 5">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="memoria-galeria-card">
+                        <a href="img/xiomi/xiomi-6.jpg" class="glightbox" data-gallery="xiomi" data-description="Xiomi Nathaly Quijandría Cotrina">
+                            <img src="img/xiomi/xiomi-6.jpg" alt="Xiomi 6">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Cierre -->
+            <div class="memoria-cierre">
+                <i class="fas fa-infinity"></i>
+                <p>Tu legado vive en cada niño que encuentra su voz a través del arte.</p>
+                <span>Reloj de Arena — Siempre en nuestros corazones</span>
             </div>
 
         </div>

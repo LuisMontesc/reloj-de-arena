@@ -107,3 +107,81 @@ const lightbox = GLightbox({
     descPosition: 'bottom',
     skin: 'clean'
 });
+
+// ===== CONTADOR ANIMADO =====
+function animarContador(elemento) {
+    const objetivo = parseInt(elemento.getAttribute('data-objetivo'));
+    const inicio = parseInt(elemento.getAttribute('data-inicio'));
+    const duracion = 2000;
+    const pasos = 60;
+    const incremento = (objetivo - inicio) / pasos;
+    let actual = inicio;
+    let paso = 0;
+
+    const intervalo = setInterval(() => {
+        paso++;
+        actual += incremento;
+
+        if (paso >= pasos) {
+            elemento.textContent = objetivo;
+            clearInterval(intervalo);
+        } else {
+            elemento.textContent = Math.floor(actual);
+        }
+    }, duracion / pasos);
+}
+
+const observadorContador = new IntersectionObserver((entradas) => {
+    entradas.forEach(entrada => {
+        if (entrada.isIntersecting) {
+            const contadores = entrada.target.querySelectorAll('.contador');
+            contadores.forEach(contador => {
+                if (!contador.classList.contains('animado')) {
+                    contador.classList.add('animado');
+                    animarContador(contador);
+                }
+            });
+        }
+    });
+}, { threshold: 0.5 });
+
+const seccionNosotros = document.getElementById('nosotros');
+if (seccionNosotros) {
+    observadorContador.observe(seccionNosotros);
+}
+
+// ===== SECCIÓN ACTIVA EN NAVBAR =====
+const secciones = document.querySelectorAll('section[id]');
+const linksNav = document.querySelectorAll('.nav-link');
+
+window.addEventListener('scroll', () => {
+    let seccionActual = '';
+    const offset = 100;
+
+    secciones.forEach(seccion => {
+        const tope = seccion.offsetTop - offset;
+        const altura = seccion.offsetHeight;
+
+        if (window.scrollY >= tope && window.scrollY < tope + altura) {
+            seccionActual = seccion.getAttribute('id');
+        }
+    });
+
+    linksNav.forEach(link => {
+        link.classList.remove('nav-activo');
+        if (link.getAttribute('href') === '#' + seccionActual) {
+            link.classList.add('nav-activo');
+        }
+    });
+});
+
+// ===== PRELOADER =====
+window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    setTimeout(() => {
+        preloader.classList.add('oculto');
+        setTimeout(() => {
+            preloader.style.display = 'none';
+        }, 600);
+    }, 2500);
+});
