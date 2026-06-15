@@ -1623,3 +1623,37 @@ footer::before {
 .nav-link.nav-activo::after {
     transform: scaleX(1);
 }
+
+/* ===== FORMULARIO EMAILJS ===== */
+.form-mensaje-exito {
+    background: rgba(23,165,137,0.15);
+    border: 1px solid var(--turquesa);
+    color: var(--turquesa-claro);
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-mensaje-error {
+    background: rgba(192,57,43,0.15);
+    border: 1px solid var(--carmesi);
+    color: #E74C3C;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#btn-enviar:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.seccion-memoria {
+    background: linear-gradient(160deg, #0D0D0D 0%, #1A0A0A 60%, #0D0D0D 100%) !important;
+}

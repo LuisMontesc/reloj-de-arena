@@ -15,14 +15,72 @@ function filtrarGaleria(categoria) {
     });
 }
 
-// ===== FORMULARIO DE CONTACTO =====
+// ===== FORMULARIO DE CONTACTO CON EMAILJS =====
 function enviarFormulario() {
-    const nombre = document.querySelector('input[placeholder="Tu nombre"]').value;
-    if (nombre.trim() === '') {
-        alert('Por favor completa tu nombre.');
+    const nombre   = document.getElementById('form-nombre').value.trim();
+    const correo   = document.getElementById('form-correo').value.trim();
+    const asunto   = document.getElementById('form-asunto').value.trim();
+    const mensaje  = document.getElementById('form-mensaje').value.trim();
+    const btnEnviar = document.getElementById('btn-enviar');
+    const respuesta = document.getElementById('form-respuesta');
+
+    // Validaciones
+    if (!nombre) {
+        mostrarRespuesta('error', 'Por favor escribe tu nombre.');
         return;
     }
-    alert('¡Gracias ' + nombre + '! Tu mensaje fue enviado. Nos comunicaremos contigo pronto.');
+    if (!correo) {
+        mostrarRespuesta('error', 'Por favor escribe tu correo.');
+        return;
+    }
+    if (!asunto) {
+        mostrarRespuesta('error', 'Por favor selecciona un asunto.');
+        return;
+    }
+    if (!mensaje) {
+        mostrarRespuesta('error', 'Por favor escribe tu mensaje.');
+        return;
+    }
+
+    // Cambia el botón a estado cargando
+    btnEnviar.disabled = true;
+    btnEnviar.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+
+    // Parámetros para EmailJS
+    const parametros = {
+        nombre:  nombre,
+        correo:  correo,
+        asunto:  asunto,
+        mensaje: mensaje
+    };
+
+    emailjs.send('reloj_de_arena', 'template_reloj', parametros)
+        .then(() => {
+            mostrarRespuesta('exito', '¡Mensaje enviado! Nos comunicaremos contigo pronto.');
+            document.getElementById('form-nombre').value = '';
+            document.getElementById('form-correo').value = '';
+            document.getElementById('form-asunto').value = '';
+            document.getElementById('form-mensaje').value = '';
+            btnEnviar.disabled = false;
+            btnEnviar.innerHTML = '<i class="fas fa-paper-plane"></i> Enviar mensaje';
+        })
+        .catch((error) => {
+            mostrarRespuesta('error', 'Hubo un error al enviar. Intenta de nuevo o contáctanos por WhatsApp.');
+            btnEnviar.disabled = false;
+            btnEnviar.innerHTML = '<i class="fas fa-paper-plane"></i> Enviar mensaje';
+            console.error('EmailJS error:', error);
+        });
+}
+
+function mostrarRespuesta(tipo, texto) {
+    const respuesta = document.getElementById('form-respuesta');
+    respuesta.innerHTML = `
+        <div class="form-mensaje-${tipo}">
+            <i class="fas fa-${tipo === 'exito' ? 'check-circle' : 'exclamation-circle'}"></i>
+            ${texto}
+        </div>
+    `;
+    setTimeout(() => { respuesta.innerHTML = ''; }, 5000);
 }
 
 // ===== NAVBAR SCROLL =====
