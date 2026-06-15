@@ -54,7 +54,7 @@ function enviarFormulario() {
         mensaje: mensaje
     };
 
-    emailjs.send('reloj_de_arena', 'template_reloj', parametros)
+emailjs.send('reloj_arena_web', 'template_pla7nd2', parametros)
         .then(() => {
             mostrarRespuesta('exito', '¡Mensaje enviado! Nos comunicaremos contigo pronto.');
             document.getElementById('form-nombre').value = '';

@@ -1657,3 +1657,69 @@ footer::before {
 .seccion-memoria {
     background: linear-gradient(160deg, #0D0D0D 0%, #1A0A0A 60%, #0D0D0D 100%) !important;
 }
+
+/* ===== BOTÓN COMPARTIR ===== */
+.compartir-label {
+    color: rgba(255,255,255,0.6);
+    font-size: 0.82rem;
+    display: flex;
+    align-items: center;
+    letter-spacing: 1px;
+}
+
+.btn-compartir {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s;
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn-compartir:hover {
+    transform: translateY(-3px);
+    text-decoration: none;
+}
+
+.btn-compartir.facebook {
+    background: rgba(24,119,242,0.2);
+    color: #74a7f7;
+    border: 1px solid rgba(24,119,242,0.3);
+}
+
+.btn-compartir.facebook:hover {
+    background: #1877F2;
+    color: white;
+    border-color: #1877F2;
+    box-shadow: 0 6px 18px rgba(24,119,242,0.4);
+}
+
+.btn-compartir.whatsapp {
+    background: rgba(37,211,102,0.2);
+    color: #5ddb8a;
+    border: 1px solid rgba(37,211,102,0.3);
+}
+
+.btn-compartir.whatsapp:hover {
+    background: #25D366;
+    color: white;
+    border-color: #25D366;
+    box-shadow: 0 6px 18px rgba(37,211,102,0.4);
+}
+
+.btn-compartir.twitter {
+    background: rgba(255,255,255,0.1);
+    color: rgba(255,255,255,0.7);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.btn-compartir.twitter:hover {
+    background: #000000;
+    color: white;
+    border-color: #000000;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+}
