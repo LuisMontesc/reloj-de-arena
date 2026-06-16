@@ -1187,6 +1187,194 @@
             <div class="linea-decorativa"></div>
             <p class="subtitulo-seccion">Estamos en Pativilca, Barranca — visítanos o escríbenos</p>
 
+            <!-- SERVICIOS Y PRECIOS -->
+            <div class="servicios-container mb-5">
+
+                <h4 class="servicios-titulo"><i class="fas fa-music"></i> Nuestros Servicios</h4>
+
+                <!-- Tabs de zonas -->
+                <div class="servicios-tabs">
+                    <button class="servicio-tab active" onclick="mostrarZona('pativilca', this)">
+                        <i class="fas fa-map-marker-alt"></i> Pativilca
+                    </button>
+                    <button class="servicio-tab" onclick="mostrarZona('barranca', this)">
+                        <i class="fas fa-map-marker-alt"></i> Barranca y Paramonga
+                    </button>
+                    <button class="servicio-tab" onclick="mostrarZona('supe', this)">
+                        <i class="fas fa-map-marker-alt"></i> Supe y Puerto Supe
+                    </button>
+                </div>
+
+                <!-- Zona Pativilca -->
+                <div class="zona-precios active" id="zona-pativilca">
+                    <p class="zona-nota"><i class="fas fa-car"></i> Movilidad incluida</p>
+                    <div class="row g-3 mb-4">
+                        <div class="col-4">
+                            <div class="precio-card">
+                                <div class="precio-icono">🥁</div>
+                                <h6>4 músicos</h6>
+                                <span class="precio-valor">S/ 200</span>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="precio-card destacado">
+                                <div class="precio-icono">🥁🥁</div>
+                                <h6>7 músicos</h6>
+                                <span class="precio-valor">S/ 280</span>
+                                <span class="precio-popular">Popular</span>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="precio-card">
+                                <div class="precio-icono">🥁🥁🥁</div>
+                                <h6>10 músicos</h6>
+                                <span class="precio-valor">S/ 400</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Zona Barranca -->
+                <div class="zona-precios" id="zona-barranca">
+                    <div class="row g-3 mb-4">
+                        <div class="col-4">
+                            <div class="precio-card">
+                                <div class="precio-icono">🥁</div>
+                                <h6>4 músicos</h6>
+                                <span class="precio-valor">S/ 220</span>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="precio-card destacado">
+                                <div class="precio-icono">🥁🥁</div>
+                                <h6>7 músicos</h6>
+                                <span class="precio-valor">S/ 300</span>
+                                <span class="precio-popular">Popular</span>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="precio-card">
+                                <div class="precio-icono">🥁🥁🥁</div>
+                                <h6>10 músicos</h6>
+                                <span class="precio-valor">S/ 420</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Zona Supe -->
+                <div class="zona-precios" id="zona-supe">
+                    <div class="row g-3 mb-4">
+                        <div class="col-4">
+                            <div class="precio-card">
+                                <div class="precio-icono">🥁</div>
+                                <h6>4 músicos</h6>
+                                <span class="precio-valor">S/ 240</span>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="precio-card destacado">
+                                <div class="precio-icono">🥁🥁</div>
+                                <h6>7 músicos</h6>
+                                <span class="precio-valor">S/ 320</span>
+                                <span class="precio-popular">Popular</span>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="precio-card">
+                                <div class="precio-icono">🥁🥁🥁</div>
+                                <h6>10 músicos</h6>
+                                <span class="precio-valor">S/ 440</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Adicionales -->
+                <div class="adicionales-container">
+                    <h5 class="adicionales-titulo">✨ Adicionales para tu evento</h5>
+                    <div class="row g-2">
+                        <div class="col-6 col-md-4 col-lg-3">
+                            <div class="adicional-item">
+                                <span class="adicional-emoji">🎪</span>
+                                <span class="adicional-nombre">Zanquero/a</span>
+                                <span class="adicional-precio">S/ 100</span>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3">
+                            <div class="adicional-item">
+                                <span class="adicional-emoji">🧸</span>
+                                <span class="adicional-nombre">Peluche</span>
+                                <span class="adicional-precio">S/ 100</span>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3">
+                            <div class="adicional-item">
+                                <span class="adicional-emoji">⛄</span>
+                                <span class="adicional-nombre">Muñeco inflable</span>
+                                <span class="adicional-precio">S/ 100</span>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3">
+                            <div class="adicional-item">
+                                <span class="adicional-emoji">🤡</span>
+                                <span class="adicional-nombre">Personajes de fantasía</span>
+                                <span class="adicional-precio">S/ 80</span>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3">
+                            <div class="adicional-item">
+                                <span class="adicional-emoji">🫧</span>
+                                <span class="adicional-nombre">Zancos saltarines</span>
+                                <span class="adicional-precio">S/ 120</span>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3">
+                            <div class="adicional-item">
+                                <span class="adicional-emoji">🤹</span>
+                                <span class="adicional-nombre">Malabares</span>
+                                <span class="adicional-precio">S/ 60</span>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3">
+                            <div class="adicional-item">
+                                <span class="adicional-emoji">🌟</span>
+                                <span class="adicional-nombre">Show de fuego</span>
+                                <span class="adicional-precio">S/ 400</span>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3">
+                            <div class="adicional-item">
+                                <span class="adicional-emoji">💃</span>
+                                <span class="adicional-nombre">Bailarín/a</span>
+                                <span class="adicional-precio">S/ 80</span>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3">
+                            <div class="adicional-item">
+                                <span class="adicional-emoji">🧠</span>
+                                <span class="adicional-nombre">Marote</span>
+                                <span class="adicional-precio">S/ 100</span>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3">
+                            <div class="adicional-item">
+                                <span class="adicional-emoji">🎨</span>
+                                <span class="adicional-nombre">Caritas pintadas</span>
+                                <span class="adicional-precio">S/ 6 x niño</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nota propuesta -->
+                <div class="servicios-nota">
+                    <i class="fas fa-lightbulb"></i>
+                    <p>¿No encuentras lo que necesitas? Escríbenos y cotizamos tu evento a medida.</p>
+                </div>
+
+            </div>
+
             <div class="row g-5">
 
                 <!-- Info de contacto -->
@@ -1322,6 +1510,7 @@
                         <li><a href="#nosotros">Nosotros</a></li>
                         <li><a href="#talleres">Talleres</a></li>
                         <li><a href="#actividades">Actividades</a></li>
+                        <li><a href="#galeria">Galería</a></li>
                         <li><a href="#eventos">Eventos</a></li>
                         <li><a href="#testimonios">Testimonios</a></li>
                         <li><a href="#equipo">Equipo</a></li>

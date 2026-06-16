@@ -243,3 +243,11 @@ window.addEventListener('load', () => {
         }, 600);
     }, 2500);
 });
+
+// ===== TABS DE SERVICIOS =====
+function mostrarZona(zona, btn) {
+    document.querySelectorAll('.zona-precios').forEach(z => z.classList.remove('active'));
+    document.querySelectorAll('.servicio-tab').forEach(t => t.classList.remove('active'));
+    document.getElementById('zona-' + zona).classList.add('active');
+    btn.classList.add('active');
+}
